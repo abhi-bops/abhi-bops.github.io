@@ -1,0 +1,30 @@
+#+AUTHOR: Abhi
+#+TITLE: Notes on using github
+
+* How to create/add a new repository to github.com
+
+** Pre-steps at github.com
+   1. Go to the github homepage.
+   2. Locate the =+= sign on the top-right.
+   3. Clicking that, should give options to create different things.
+   4. Click on *New repository*
+   5. This will open a new page titled *Create a new repository*
+   6. Enter the repository name, description.
+   7. If *Add a README file* is selected, the default branch gets called as *main*
+   8. Click on *Create repository*
+
+
+** Cooking at local machine
+   1. Create a directory in the local machine containing all the files in the directory structure that is expected.
+   2. Run =git init= ; this will initiate a git repository
+   3. (First time) Run =git config user.name $NAME= to use $NAME for submissions
+   4. (First time) Run =git config user.email $EMAIL= to use $EMAIL for submissions
+   5. (First tie) Run =git remote add origin "https://github.com/$USER-NAME/$REPO-NAME.git"= ; this will set the location where the codes can be fetched from or pushed to.
+   6. If *Add a README file* was used, we need to run this Run =git pull origin main= ; this will sync the current directory to the latest in repository
+   7. Run =git add *= ; this will add all the files in the current directory to a staging area ready to be pushed to github.
+   8. Run =git commit -m "Information about the change"= ; this will update the current state of the repository, indicating that you are ready with the changes to get deployed.
+   9. Run =git branch -M $DEFAULT-BRANCH= ; the default-branch can be got by opening the repository in github and checking the menu just below the "Code/Issues/..." section. It is usually *master* but if you selected the "Add a README file* option, it will be *main*.
+   10. Run =git push -u origin master= ; this will push the changes into github.
+
+
+
